@@ -1,0 +1,12 @@
+CREATE TABLE user_accounts (
+    ID INT AUTO_INCREMENT,
+    login VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255),
+    first_name VARCHAR(255),
+    last_name VARCHAR(255),
+    DOB DATE,
+    role_id INT,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (role_id) REFERENCES roles(ID)
+);

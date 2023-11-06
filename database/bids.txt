@@ -1,0 +1,10 @@
+CREATE TABLE bids (
+    ID INT AUTO_INCREMENT,
+    timeslot_id INT,
+    user_account_id INT,
+    reviewed BOOL,
+    approved BOOL,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (timeslot_id) REFERENCES timeslots(ID),
+    FOREIGN KEY (user_account_id) REFERENCES user_accounts(ID)
+);
